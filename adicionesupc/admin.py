@@ -10,7 +10,7 @@ class AdicionAdmin(admin.ModelAdmin):
 admin.site.register(Adicion,AdicionAdmin)
 
 class EstudianteAdmin(admin.ModelAdmin):
-    list_display = ('codigo','primer_nombre','primer_apellido','segundo_apellido')
+    list_display = ('codigo','programa','primer_nombre','segundo_nombre','primer_apellido','segundo_apellido')
     list_filter = ['programa']
     search_fields = ['codigo','primer_nombre','segundo_apellido']
 

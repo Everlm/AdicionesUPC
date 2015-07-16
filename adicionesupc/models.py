@@ -18,7 +18,7 @@ class Estudiante(models.Model):
     codigo = models.CharField(primary_key=True,max_length=12)
     programa = models.ForeignKey(Programa)
     primer_nombre= models.CharField(max_length=50)
-    segundo_nombre = models.CharField(max_length=50,blank=True,null=True,default='No tiene')
+    segundo_nombre = models.CharField(max_length=50,blank=True,null=True)
     primer_apellido = models.CharField(max_length=50)
     segundo_apellido = models.CharField(max_length=50)
 

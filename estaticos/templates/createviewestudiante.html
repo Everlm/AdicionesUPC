@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="col-lg-7">
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Registro Estudiante</h3>
-  </div>
-  <div class="panel-body">
-    <form width="100px" method="POST" action=".">
-        {% csrf_token %}
-        {{ form }}
-         <br/>
-    <input type="submit" value="Grabar" class="btn btn-primary default" name="_save">
-    </form>
-  </div>
-</div>
-
-</div>
-
+    <div class="container.fluid">
+        <div class="col-xs-7">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Registro Estudiante</h3>
+                </div>
+                <div class="panel-body">
+                    <form width="100px" method="POST" action=".">
+                        {% csrf_token %}
+                        <label>Seleccione programa:</label>{{ form.programa }}
+                        <br><label>identificacion:</label>{{ form.codigo }}
+                        <br><label>Primer nombre :</label>{{ form.primer_nombre }}
+                        <br><label>Segundo nombre("opcional"):</label>{{ form.segundo_nombre }}
+                        <br><label>Primer apellido:</label>{{ form.primer_apellido }}
+                        <br><label>Segundo apellido:</label>{{ form.segundo_apellido }}
+                         <br/>
+                    <input type="submit" value="Grabar" class="btn btn-primary default" name="_save">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
