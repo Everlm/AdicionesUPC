@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h2>Realmente desea eliminar {{ object }} ?</h2>
+    <p>Este dato se borrara permanentemente</p>
+    <form method="POST" action="/eliminarprograma/{{ object.codigo }}" role="form">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Sí, estoy seguro">
+
+    </form>
+</body>
+</html>

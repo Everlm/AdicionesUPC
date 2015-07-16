@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="col-lg-7">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Registro Estudiante</h3>
+  </div>
+  <div class="panel-body">
+    <form width="100px" method="POST" action=".">
+        {% csrf_token %}
+        {{ form }}
+         <br/>
+    <input type="submit" value="Grabar" class="btn btn-primary default" name="_save">
+    </form>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+{% endblock %}
+
