@@ -33,7 +33,6 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 INSTALLED_APPS = (
     'bootstrap3',
-    'materialize',
     'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
