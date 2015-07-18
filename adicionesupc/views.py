@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from .models import Estudiante,Programa,Materia,Adicion
-from django.views.generic import ListView,CreateView,DeleteView,UpdateView,DetailView
+from django.views.generic import ListView,CreateView,DeleteView,UpdateView,DetailView,TemplateView
 from .forms import FormularioEstudiante,FormularioPrograma,FormularioMateria,FormularioAdicion
 from django.core.urlresolvers import reverse_lazy
 
@@ -12,6 +12,8 @@ from django.core.urlresolvers import reverse_lazy
 #success_url=redirecciona a la url que se le indica
 #form_class= formulario de la archivo form
 
+class IndexView(TemplateView):
+    template_name = "index.html"
 #-----------Programa--------------
 
 class CrearPrograma(CreateView):
@@ -49,7 +51,7 @@ class CrearEstudiante(CreateView):
     model = Estudiante
     template_name = 'createviewestudiante.html'
     form_class = FormularioEstudiante
-    success_url = "/"
+    success_url = "/crearestudiante"
 
 
 

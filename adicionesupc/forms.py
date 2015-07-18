@@ -21,11 +21,11 @@ class FormularioEstudiante(forms.ModelForm):
         fields = ['programa','codigo','primer_nombre','segundo_nombre','primer_apellido','segundo_apellido']
         widgets={
             'programa':forms.Select(attrs={'class':'form-control'}),
-            'codigo':forms.TextInput(attrs={'class':'form-control','placeholder':'digite codigo'}),
-            'primer_nombre':forms.TextInput(attrs={'class':'form-control','placeholder':'digite primer nombre'}),
-            'segundo_nombre':forms.TextInput(attrs={'class':'form-control','placeholder':'digite segundo nombre'}),
-            'primer_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':'digite primer apellido'}),
-            'segundo_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':'digite segundo apellido'}),
+            'codigo':forms.TextInput(attrs={'class':'form-control','placeholder':'Identificacion'}),
+            'primer_nombre':forms.TextInput(attrs={'class':'form-control','placeholder':'Primer nombre'}),
+            'segundo_nombre':forms.TextInput(attrs={'class':'form-control','placeholder':'Segundo nombre'}),
+            'primer_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':' Primer apellido'}),
+            'segundo_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':'Segundo apellido'}),
 
         }
 

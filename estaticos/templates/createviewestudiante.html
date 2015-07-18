@@ -1,32 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-
+    <br>
+    <br>
+    <br>
+    <h4>Llena el siguiente formulario</h4>
+    <hr/>
     <div class="container.fluid">
-        <div class="col-xs-7">
+        <div class="col-md-7">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Registro Estudiante</h3>
                 </div>
                 <div class="panel-body">
                     <form  class="form-horizontal" role="form" method="POST" action=".">
+                        <fieldset>
                         {% csrf_token %}
 
-                        <label>Seleccione programa:</label>{{ form.programa }}
-                        <br><label>identificacion:</label>{{ form.codigo }}
+                        <label>Seleccione programa :</label>{{ form.programa }}
+                        <br><label>Identificacion :</label>{{ form.codigo }}
                         <br><label>Primer nombre :</label>{{ form.primer_nombre }}
-                        <br><label>Segundo nombre("opcional"):</label>{{ form.segundo_nombre }}
-                        <span class="help-block">Sino tiene dejarlo vacio</span>
-                        <br><label>Primer apellido:</label>{{ form.primer_apellido }}
-                        <br><label>Segundo apellido:</label>{{ form.segundo_apellido }}
+                        <br><label>Segundo nombre :</label>{{ form.segundo_nombre }}
+                        <br><label>Primer apellido :</label>{{ form.primer_apellido }}
+                        <br><label>Segundo apellido :</label>{{ form.segundo_apellido }}
                          <br/>
                     <input type="submit" value="Grabar" class="btn btn-primary default" name="_save">
+                         </fieldset>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-
+<br>
 
 
 {% endblock %}

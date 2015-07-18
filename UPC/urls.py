@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'^eliminarprograma/(?P<pk>.*)$', EliminarPrograma.as_view(), name='eliminar'),
     url(r'^editarprograma/(?P<pk>.*)$',ActualizarPrograma.as_view(), name='actualizar'),
     url(r'^crearestudiante/', CrearEstudiante.as_view(), name='crearestudiante'),
+    url(r'^index/', IndexView.as_view(), name='index'),
 ]
