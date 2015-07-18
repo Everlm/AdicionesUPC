@@ -18,7 +18,7 @@ class FormularioPrograma(forms.ModelForm):
 class FormularioEstudiante(forms.ModelForm):
     class Meta:
         model= Estudiante
-        fields = ['programa','codigo','primer_nombre','segundo_nombre','primer_apellido','segundo_apellido']
+        fields = ['programa','codigo','primer_nombre','segundo_nombre','primer_apellido','segundo_apellido','correo']
         widgets={
             'programa':forms.Select(attrs={'class':'form-control'}),
             'codigo':forms.TextInput(attrs={'class':'form-control','placeholder':'Identificacion'}),
@@ -26,8 +26,9 @@ class FormularioEstudiante(forms.ModelForm):
             'segundo_nombre':forms.TextInput(attrs={'class':'form-control','placeholder':'Segundo nombre'}),
             'primer_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':' Primer apellido'}),
             'segundo_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':'Segundo apellido'}),
+            'correo':forms.EmailInput(attrs={'class':'form-control','placeholder':'Email'})
 
-        }
+         }
 
 class FormularioMateria(forms.ModelForm):
     class Meta:

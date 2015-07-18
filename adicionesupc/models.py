@@ -2,7 +2,12 @@ from django.db import models
 from django.core.validators import RegexValidator
 from django.utils import timezone
 
+class Facultad (models.Model):
+    codigo = models.CharField(primary_key=True,max_length=20)
+    nombre =models.CharField(max_length=50)
+
 class Programa (models.Model):
+    facultad=models.ForeignKey(Facultad)
     codigo = models.CharField(primary_key=True,max_length=20)
     nombre =  models.CharField(max_length=50)
 
@@ -21,6 +26,7 @@ class Estudiante(models.Model):
     segundo_nombre = models.CharField(max_length=50,blank=True,null=True)
     primer_apellido = models.CharField(max_length=50)
     segundo_apellido = models.CharField(max_length=50)
+    correo=models.EmailField(max_length=100)
 
     #devuelve el nombre de la facultad en el admin
     def __str__(self):
