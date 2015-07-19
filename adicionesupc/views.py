@@ -51,8 +51,7 @@ class CrearEstudiante(CreateView):
     model = Estudiante
     template_name = 'createviewestudiante.html'
     form_class = FormularioEstudiante
-    success_url = "/crearestudiante"
-
+    success_url ="/crearestudiante"
 
 
 class ListaEstudiante(ListView):

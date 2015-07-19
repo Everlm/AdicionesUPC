@@ -4,7 +4,13 @@ from django.utils import timezone
 
 class Facultad (models.Model):
     codigo = models.CharField(primary_key=True,max_length=20)
-    nombre =models.CharField(max_length=50)
+    nombre = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name_plural='Facultades'
 
 class Programa (models.Model):
     facultad=models.ForeignKey(Facultad)

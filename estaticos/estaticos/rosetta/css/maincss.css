@@ -719,8 +719,8 @@ label {
     transition: background-color 0.3s linear;
 }
 .navbar-alt.navbar-default {
-    background: rgba(255, 255, 255, 0.9);
-    border-color: #e8e9ed;
+    background:#2b2e33;
+    border-color: #27ae60;
 }
 .navbar-alt.navbar-default .navbar-search {
     background: rgba(255, 255, 255, 0.9);
@@ -838,7 +838,7 @@ label {
 }
 .navbar-alt .navbar-nav  >  li  >  a:hover,
 .navbar-alt .navbar-nav  >  li  >  a:focus:hover {
-    color: #2b2e33;
+    color: #27ae60;
 }
 .navbar-nav  >  li.active  >  a {
     color: #2b2e33;
