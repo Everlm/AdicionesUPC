@@ -1,6 +1,8 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from adicionesupc.views import *
+from django.views.generic import TemplateView
+
 
 urlpatterns = [
     # Examples:
@@ -15,4 +17,5 @@ urlpatterns = [
     url(r'^editarprograma/(?P<pk>.*)$',ActualizarPrograma.as_view(), name='actualizar'),
     url(r'^crearestudiante/', CrearEstudiante.as_view(), name='crearestudiante'),
     url(r'^index/', IndexView.as_view(), name='index'),
+
 ]

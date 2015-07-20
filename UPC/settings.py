@@ -27,12 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Captcha - google.com/recaptcha
+NORECAPTCHA_SITE_KEY='6Lf8AAoTAAAAAJp7o6VJ-wx0tsqHHjOt7slYh-lO'
+NORECAPTCHA_SECRET_KEY ='6Lf8AAoTAAAAAFJ7J6aZ64871H_ji2g2QyU27LGj'
+
 
 # Application definition
 INTERNAL_IPS = ('127.0.0.1',)
 
 INSTALLED_APPS = (
     'bootstrap3',
+    'captcha',
     'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',

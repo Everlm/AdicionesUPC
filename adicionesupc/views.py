@@ -2,7 +2,6 @@ from django.shortcuts import render_to_response
 from .models import Estudiante,Programa,Materia,Adicion
 from django.views.generic import ListView,CreateView,DeleteView,UpdateView,DetailView,TemplateView
 from .forms import FormularioEstudiante,FormularioPrograma,FormularioMateria,FormularioAdicion
-from django.core.urlresolvers import reverse_lazy
 
 #vista basada en clase para crear un objecto
 #propiedades de la clase

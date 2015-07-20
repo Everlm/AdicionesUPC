@@ -62,7 +62,9 @@ class Adicion(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.estudiante.primer_nombre,self.estudiante.codigo
+        return self.estudiante.codigo
+
+
 
     def adicionado_hoy(self):
         return self.fecha.date() == timezone.now().date()

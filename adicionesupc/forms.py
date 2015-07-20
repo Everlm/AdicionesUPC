@@ -1,9 +1,8 @@
 __author__ = 'EverL'
 from django import forms
-#from crispy_forms.helper import FormHelper
-#from crispy_forms.layout import Layout, Div, Submit, HTML, Button, Row, Field
-#from crispy_forms.bootstrap import AppendedText, PrependedText, FormActions
 from .models import Estudiante,Programa,Materia,Adicion,Facultad
+
+
 
 class FormularioPrograma(forms.ModelForm):
     class Meta:
@@ -25,9 +24,10 @@ class FormularioEstudiante(forms.ModelForm):
             'segundo_nombre':forms.TextInput(attrs={'class':'form-control','placeholder':'Segundo nombre'}),
             'primer_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':' Primer apellido'}),
             'segundo_apellido':forms.TextInput(attrs={'class':'form-control','placeholder':'Segundo apellido'}),
-            'correo':forms.EmailInput(attrs={'class':'form-control','placeholder':'Email'})
+            'correo':forms.EmailInput(attrs={'class':'form-control','placeholder':'Email'}),
 
-         }
+
+        }
 
 class FormularioMateria(forms.ModelForm):
     class Meta:

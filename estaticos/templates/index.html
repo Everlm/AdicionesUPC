@@ -1,14 +1,119 @@
 {% extends "base.html" %}
 {% block tittle %}{% endblock %}
 {% block content %}
-   <section class="features dark  parallax-section-2">
-            <div class="container">
+   <div class="container">
+                <!-- Accordion -->
+                <!-- ++++++++++++++++++++++++++++++++++++++++ -->
+                <h4 class="section-header">accordion</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="accordion-one" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default panel-alt-two"  >
 
-                <section class="container">
+                                <div class="panel-heading active" role="tab" id="headingOne">
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-one" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="accordion-icon">
+                                                <span class="stacked-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </span>
+                                            </span>
+                                            Donec condimentum ex a elit tempor
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                    </div>
+                                </div>
 
-                </section>
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h5 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-one" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="accordion-icon">
+                                                <span class="stacked-icon">
+                                                    <i class="fa fa-quote-left"></i>
+                                                </span>
+                                            </span>
+                                            Curabitur quis dui at neque congue varius
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                    </div>
+                                </div>
 
-            </div><!--container-->
-        </section>
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h5 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-one" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                            Nunc libero velit, aliquet quis cursus nec
+                                            <span class="accordion-icon">
+                                                <span class="stacked-icon">
+                                                    <i class="fa fa-flag"></i>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                    </div>
+                                </div>
+                            </div><!--panel-->
+                        </div><!--accordion-->
+                    </div><!--col-->
+
+                    <div class="col-md-6">
+                        <div id="accordion-two" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default panel-alt-one"  >
+                                <div class="panel-heading active" role="tab" id="headingFour">
+                                    <h6 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-two" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                            <i class="fa fa-minus-circle pull-right"></i>
+                                            Donec condimentum ex a elit tempor
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                    </div>
+                                </div>
+
+                                <div class="panel-heading" role="tab" id="headingFive">
+                                    <h6 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-two" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            <i class="fa fa-plus-circle pull-right"></i>
+                                            Curabitur quis dui at neque congue varius
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                    </div>
+                                </div>
+
+                                <div class="panel-heading" role="tab" id="headingSix">
+                                    <h6 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-two" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            <i class="fa fa-plus-circle pull-right"></i>
+                                            Nunc libero velit, aliquet quis cursus nec
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                    <div class="panel-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                                    </div>
+                                </div>
+                            </div><!--panel-->
+                        </div><!--accordion-->
+                    </div><!--col-->
+                </div><!--row-->
 
 {% endblock %}
