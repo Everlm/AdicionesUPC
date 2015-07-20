@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import RegexValidator
 from django.utils import timezone
 
 class Facultad (models.Model):
@@ -62,8 +61,7 @@ class Adicion(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.estudiante.codigo
-
+        return self.estudiante.primer_nombre
 
 
     def adicionado_hoy(self):

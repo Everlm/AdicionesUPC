@@ -1,15 +1,15 @@
 from django.shortcuts import render_to_response
 from .models import Estudiante,Programa,Materia,Adicion
+from django.core.urlresolvers import reverse_lazy
 from django.views.generic import ListView,CreateView,DeleteView,UpdateView,DetailView,TemplateView
 from .forms import FormularioEstudiante,FormularioPrograma,FormularioMateria,FormularioAdicion
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
+from django.contrib.auth import login,authenticate,logout
+from django.contrib.auth.forms import AuthenticationForm,UserCreationForm,authenticate
+from  django.template import RequestContext
 
-#vista basada en clase para crear un objecto
-#propiedades de la clase
-#model=modelo a crear,eliminar.editar o visualizar dependiendo el tipo de clase
-#template_name= plantilla donde se mostrara la vista
-#fields=necesrio para crear y editar una vista muestra un formulario con los atributos que se le indican dentro
-#success_url=redirecciona a la url que se le indica
-#form_class= formulario de la archivo form
+#login
 
 class IndexView(TemplateView):
     template_name = "index.html"
@@ -21,23 +21,22 @@ class CrearPrograma(CreateView):
     form_class = FormularioPrograma
     success_url = "/"
 
-#listar todos los programas
+
 class ListaPrograma(ListView):
     template_name = 'listviewprograma.html'
     model = Programa
 
-#detalle de un programa
 class DetallePrograma(DetailView):
     template_name = 'detailviewprograma.html'
     model = Programa
 
-#eliminar un programa
+
 class EliminarPrograma(DeleteView):
     template_name = 'deleteviewprograma.html'
     model=Programa
     success_url = "/"
 
-#actualizar un modelo
+
 class ActualizarPrograma(UpdateView):
     template_name = 'updateviewprograma.html'
     model=Programa
@@ -50,7 +49,7 @@ class CrearEstudiante(CreateView):
     model = Estudiante
     template_name = 'createviewestudiante.html'
     form_class = FormularioEstudiante
-    success_url ="/crearestudiante"
+    success_url = reverse_lazy('lista')
 
 
 class ListaEstudiante(ListView):
