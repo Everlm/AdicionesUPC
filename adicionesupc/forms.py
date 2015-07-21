@@ -9,8 +9,8 @@ class FormularioPrograma(forms.ModelForm):
         model= Programa
         fields = ['codigo','nombre']
         widgets={
-            'codigo':forms.TextInput(attrs={'class':'form-control'}),
-            'nombre':forms.TextInput(attrs={'class':'form-control'}),
+            'codigo':forms.TextInput(attrs={'class':'form-control','required':True}),
+            'nombre':forms.TextInput(attrs={'class':'form-control','required':True}),
         }
 
 class FormularioEstudiante(forms.ModelForm):

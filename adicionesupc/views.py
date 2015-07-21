@@ -47,9 +47,10 @@ class ActualizarPrograma(UpdateView):
 
 class CrearEstudiante(CreateView):
     model = Estudiante
-    template_name = 'createviewestudiante.html'
     form_class = FormularioEstudiante
+    template_name = 'createviewestudiante.html'
     success_url = reverse_lazy('lista')
+
 
 
 class ListaEstudiante(ListView):

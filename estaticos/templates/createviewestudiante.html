@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
     <h4 class="section-header">Registre sus datos</h4>
         <div class="container.fluid" >
         <div class="col-lg-">
@@ -22,7 +21,11 @@
                         <br><label>Email:</label>{{ form.correo }}
                         <br><div class="g-recaptcha" data-sitekey="6Lf8AAoTAAAAAJp7o6VJ-wx0tsqHHjOt7slYh-lO"></div>
                         <br/>
-                    <input type="submit" value="Grabar" class="btn btn-primary btn-sm"name="_save">
+                        <label>
+                            <input type="checkbox" value="">
+                                    Acepta las condiciones del servicio y la politica de la privacidad
+                        </label>
+                         <br><input type="submit" value="Grabar" class="btn btn-primary btn-sm"name="_save">
                          </fieldset>
                     </form>
                 </div>
